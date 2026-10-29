@@ -1,0 +1,44 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text("Flutter Layouts")),
+      body: layout(),
+    );
+  }
+
+  Widget layout() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        box(Colors.red),
+        box(Colors.green),
+        box(Colors.blue),
+      ],
+    );
+  }
+
+  Widget box(Color color) {
+    return Container(
+      width: 50,
+      height: 50,
+      color: color,
+      margin: EdgeInsets.all(5),
+    );
+  }
+}

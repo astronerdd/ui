@@ -1,0 +1,38 @@
+## Flutter Project Creation Steps (For Lab Exam)
+
+### Steps
+
+1. Open VS Code.
+2. Open the terminal using \`Ctrl + \`\`.
+3. Create a Flutter project:
+   ```
+   flutter create counter_app
+   ```
+4. Open the project folder:
+   ```
+   cd counter_app
+   ```
+5. Open the project in VS Code:
+   ```
+   code .
+   ```
+6. Open `lib/main.dart`.
+7. Delete the default code and write the program.
+8. If using Provider, install the package:
+   ```
+   flutter pub add provider
+   ```
+9. Connect an emulator or Android phone with USB debugging enabled.
+10. Check connected devices:
+    ```
+    flutter devices
+    ```
+11. Run the application:
+    ```
+    flutter run
+    ```
+12. Test the application by clicking the Increment button and verify that the counter increases.
+
+### Result
+
+The Flutter project was created and executed successfully, and the counter application was tested using state management.

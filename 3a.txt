@@ -1,0 +1,21 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(MaterialApp(home: Home()));
+
+class Home extends StatelessWidget {
+@override
+Widget build(BuildContext context) {
+return Scaffold(
+appBar: AppBar(title: Text('Responsive UI')),
+body: LayoutBuilder(
+builder: (context, c) {
+return Center(
+child: c.maxWidth < 600
+? Text('Mobile Layout')
+: Text('Desktop Layout'),
+);
+},
+),
+);
+}
+}

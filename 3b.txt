@@ -1,0 +1,28 @@
+import 'package:flutter/material.dart';
+void main() => runApp(MaterialApp(home: Home()));
+
+class Home extends StatelessWidget {
+@override
+Widget build(BuildContext context) {
+return Scaffold(
+appBar: AppBar(title: Text('Responsive UI')),
+body: LayoutBuilder(
+builder: (context, c) => c.maxWidth < 600
+? Column(
+mainAxisAlignment: MainAxisAlignment.center,
+children: [
+FlutterLogo(size: 80),
+Text('Narrow Layout'),
+],
+)
+: Row(
+mainAxisAlignment: MainAxisAlignment.center,
+children: [
+FlutterLogo(size: 120),
+Text('Wide Layout'),
+],
+),
+),
+);
+}
+}

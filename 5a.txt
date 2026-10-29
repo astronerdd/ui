@@ -1,0 +1,24 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(MaterialApp(home: Home()));
+
+class Home extends StatefulWidget {
+@override
+State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+int count = 0;
+
+@override
+Widget build(BuildContext context) {
+return Scaffold(
+appBar: AppBar(title: Text('setState Counter')),
+body: Center(child: Text('$count')),
+floatingActionButton: FloatingActionButton(
+onPressed: () => setState(() => count++),
+child: Icon(Icons.add),
+),
+);
+}
+}
